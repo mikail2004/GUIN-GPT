@@ -59,8 +59,6 @@ def summarizeMemories():
     with open(memoriesPath, "w") as outfile:
         outfile.write(json_object)
 
-purgeMemory()
-
 if __name__ == "__main__":
     Running = True
     count = 0
