@@ -1,0 +1,18 @@
+{
+  "name": "guinevere",
+  "version": "1.0.0",
+  "main": "guinJS.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "openai": "^5.0.2",
+    "prompt-sync": "^4.2.0",
+    "sqlite3": "^5.1.7"
+  },
+  "type": "module"
+}
