@@ -7,3 +7,18 @@ Note: You must create a `.env` file with your OpenAI API key.
 `guinMemories.json`: JSON file for storing conversation history in Python
 
 `memory.db`:	SQLite database file for storing conversation history in JS (Node.js)
+
+### Node.js Requirements
+```
+openai
+dotenv
+readline
+sqlite3
+```
+
+### Python Requirements
+```
+openai
+dotenv
+```
+
