@@ -96,7 +96,6 @@ const purgeDB = async () => {
   });
 
   // Insert the defaultSet (Convert JSON to string)
-  messageSet = defaultSet;
   db.run(`INSERT OR REPLACE INTO convoHistory (id, memories) VALUES (?, ?)`, [1, JSON.stringify(defaultSet)]);
 }
 
@@ -106,8 +105,9 @@ const summarizeMemories = async () => {
   const completion = await client.chat.completions.create({model: "gpt-4o-mini", messages:messageSet});
   const Summary = completion.choices[0].message.content;
 
-  await purgeDB();
+  messageSet = defaultSet;
   messageSet.push({role: "assistant", content: Summary});
+  await purgeDB();
   await saveMemory();
 };
 
